@@ -53,7 +53,7 @@ abstract class AbstractControllerTestCase extends PHPUnit_Framework_TestCase
     /**
      * Reset the application for isolation
      */
-    protected function setUp()
+    public function setUp(): void
     {
         $this->usedConsoleBackup = Console::isConsole();
         $this->reset();
@@ -62,7 +62,7 @@ abstract class AbstractControllerTestCase extends PHPUnit_Framework_TestCase
     /**
      * Restore params
      */
-    protected function tearDown()
+    public function tearDown(): void
     {
         Console::overrideIsConsole($this->usedConsoleBackup);
 
